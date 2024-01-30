@@ -1,0 +1,345 @@
+:root {
+    --main-color: #478ec4; /* Define a variable named --main-color */
+}
+body, html {
+    margin: 0;
+    padding: 0;
+    overscroll-behavior: none;
+    overflow: hidden;
+    font-family: 'Karla', sans-serif;
+    
+}
+/* Keyframes for the spinning effect */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes slideOut {
+    from {
+        transform: translate(0px);
+    }
+    to {
+        transform: translate(-90%);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translate(-90%);
+    }
+    to {
+        transform: translate(0px);
+    }
+}
+@keyframes fadeAway {
+    from {
+        opacity: 100;
+    }
+    to {
+        opacity: 0;
+    }
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 100;
+    }
+}
+/* Styles for the loading spinner container */
+.loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff0a; /* Adjust color as needed */
+    z-index: 1000; /* To ensure it stays above other content */
+    backdrop-filter: blur(10px); /* Blur effect */
+    -webkit-backdrop-filter: blur(10px); /* For Safari */
+}
+.loading.off {
+    animation: fadeAway 2s forwards; /* 10-second animation to hide */
+    z-index: -1;
+}
+
+/* Styles for the loading spinner itself */
+#loading-spinner {
+    border: 6px solid #f3f3f3; /* Light grey border */
+    border-top: 6px solid var(--main-color); /* Blue color for the spinning part */
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 2s linear infinite;
+    margin-bottom: 20%;
+}
+
+.logoload{
+    max-width: 50%;  /* Adjust the width to the maximum of the container */
+    max-height: 50%; /* Adjust the height to the maximum of the container */
+    height: auto;     /* Maintain aspect ratio */
+    width: auto;      /* Maintain aspect ratio */
+}
+
+
+.sidebar {
+    transform: translate(-100%);
+    padding-right: 5%;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Aligns children vertically in the center */
+    align-items: center; /* Centers children horizontally */
+    width: 30%; /* Adjust as needed */
+    height: 100vh; /* Adjust height to viewport */
+    clip-path: polygon(0 0, 90% 0%,90% 40%,calc(90% + 50px) 42%, calc(90% + 50px) 58%, 90% 60%, 90% 100%,0 100%);
+    background-color: #ffffff0a; /* Adjust color as needed */
+    z-index: 1000; /* To ensure it stays above other content */
+    backdrop-filter: blur(10px); /* Blur effect */
+    -webkit-backdrop-filter: blur(10px); /* For Safari */
+}
+
+
+.sidebarbutton {
+    position: fixed;
+    display: flex;
+    left:90%;
+    flex-direction: column;
+    justify-content: center; /* Aligns children vertically in the center */
+    align-items: center; /* Centers children horizontally */
+    height: 200px; /* Adjust height to viewport */
+    background-color: #ffffff00; /* Adjust color as needed */
+    z-index: 1000; /* To ensure it stays above other content */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top-right-radius: 10px; /* Adjust as needed for rounded top right edge */
+    border-bottom-right-radius: 10px;
+}
+
+.logo {
+    width: 80%; /* Adjust as needed */
+    margin-bottom: 10px;
+}
+
+table {
+    width: 80%;
+    border-collapse: collapse;
+    background-color: rgb(22, 22, 22); /* Set table background color */
+    border-radius: 10px; /* Rounded corners for the table */
+    overflow: hidden; /* Ensures the rounded corners are visible */
+    box-shadow: 0 0 10px rgba(43, 43, 43, 0.5); /* Optional: Adds shadow for depth */
+    margin-bottom: 20px; /* Space below the table */
+    color: #a09f9d; /* Set text color to white */
+    font-weight: lighter;
+}
+
+table, th, td {
+    border: 1px solid #2a2a2a;
+    padding: 5px;
+    text-align: left;
+}
+
+
+table th[colspan="3"] {
+    text-align: center;
+    color: var(--main-color);
+    padding: 10px;
+    font-size: 1.2em;
+    
+}
+
+th, td {
+    padding: 10px; /* Padding inside cells */
+    text-align: left; /* Align text to the left */
+}
+
+thead {
+    background: linear-gradient(145deg, #1a1a1a, #2e2e2e); /* Gradient for header */
+}
+
+tbody tr:nth-child(odd) {
+    background: #1a1a1a; /* Slightly lighter rows for better readability */
+}
+
+tbody tr:hover {
+    background: #333; /* Hover effect */
+}
+
+
+.sidebar.slide-out {
+    animation: slideIn 2s forwards; /* 10-second animation to hide */
+}
+
+.sidebar.slide-in {
+    animation: slideOut 2s forwards; /* 10-second animation to show */
+}
+
+
+
+.chevron {
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    position: relative; 
+    color: var(--main-color);
+}
+
+.chevron:before, .chevron:after {
+    /* existing styles... */
+    transform: translate(-50%, -50%) rotate(-45deg); /* Chevron pointing right */
+}
+
+.chevron.open:before, .chevron.open:after {
+    transform: translate(-50%, -50%) rotate(135deg); /* Chevron pointing left */
+}
+
+#toggleButton i {
+    /* Rotate icon for open state */
+    transition: transform 0.3s ease;
+    font-size: 30px;
+}
+
+#toggleButton.open i {
+    transform: rotate(180deg); /* Adjust rotation for desired direction */
+}
+
+#material-selector-container {
+    position: absolute;
+    opacity: 0;
+    bottom: 10px;    /* Adjust as needed */
+    right: 10px;   /* Adjust as needed */
+    z-index: 100; /* Ensure it's on top of the canvas */
+
+    display: flex;
+    flex-direction: column;
+
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    align-items: stretch; 
+    color: rgb(155, 155, 155); /* Text color */
+}
+#material-selector-container.on {
+    animation: fadeIn 3s forwards;
+}
+
+.material-select-row span {
+    margin-right: 10px;
+    
+}
+
+.material-select-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.circle-container {
+    display: flex;
+}
+
+.material-color-circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-left: 5px; /* Add space between circles */
+    border: 2px solid #9b9b9b;
+    cursor: pointer;
+
+}
+
+
+
+#parts-selector-container {
+    position: absolute;
+    top: 10px;
+    right: 10px; /* Adjust position as needed */
+    z-index: 100; /* Ensure it's on top of the canvas */
+
+    display: flex;
+    flex-direction: column;
+
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    align-items: stretch;
+    color: #9b9b9b; /* Text color */
+    opacity: 0; /* Initially hidden, similar to material selector */
+}
+
+#parts-selector-container.on {
+    animation: fadeIn 3s forwards; /* Assuming you have a fadeIn animation */
+}
+
+.parts-select-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.parts-container {
+    display: flex;
+}
+
+.part-button {
+    background-color: #333; /* Button background color */
+    color: #a5a5a5; /* Button text color */
+    border: 1px solid #a5a5a5; /* Button border */
+    padding: 5px 10px;
+    margin-left: 5px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.clear-button {
+    background-color: #444; /* Clear button background color */
+    color: #a5a5a5; /* Clear button text color */
+    border: 1px solid #a5a5a5; /* Clear button border */
+    padding: 5px 10px;
+    margin-left: 5px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.selected {
+    border-color: #f6ff7b; /* Example: a distinct border color for selected items */
+    /* Other styles to highlight the selected button */
+}
+@media (max-width: 1400px) {
+    .sidebar {
+        width: 100%;
+        padding-right: 0%;
+        /* You may want to add additional styles for the smaller screen, like changing the font size or padding */
+    }
+    .sidebar.slide-out{
+        clip-path: polygon(0 0, 100% 0%,100% 100%,0 100%);
+        padding-right: 0%;
+    }
+    #material-selector-container {
+        left: 10px;
+    }
+    .logoload{
+        max-width: 100%;  /* Adjust the width to the maximum of the container */
+        max-height: 100%; /* Adjust the height to the maximum of the container */
+        height: auto;     /* Maintain aspect ratio */
+        width: auto;      /* Maintain aspect ratio */
+    }
+    
+}
+
