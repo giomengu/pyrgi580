@@ -323,7 +323,7 @@ tbody tr:hover {
 }
 @media (max-width: 1400px) {
     .logo {
-    width: 60%; /* Adjust as needed */
+    width: 50%; /* Adjust as needed */
     margin-bottom: 5px;
     }
     .sidebar {
