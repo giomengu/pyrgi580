@@ -322,6 +322,10 @@ tbody tr:hover {
     /* Other styles to highlight the selected button */
 }
 @media (max-width: 1400px) {
+    .logo {
+    width: 60%; /* Adjust as needed */
+    margin-bottom: 5px;
+    }
     .sidebar {
         width: 100%;
         padding-right: 0%;
