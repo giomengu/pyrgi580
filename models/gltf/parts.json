@@ -1,0 +1,49 @@
+[
+    {
+        "categoryName": "Helm",
+        "parts": [
+            {
+                "partName": "Pilotina 1",
+                "fileName": "pil1.glb",
+                "note": "1",
+                "blockedParts": ["Flags1"]
+            },
+            {
+                "partName": "Pilotina 2",
+                "fileName": "pil2.glb",
+                "note": "2",
+                "blockedParts": ["Flags1"]
+            }
+        ]
+    },
+    {
+        "categoryName": "Seat",
+        "parts": [
+            {
+                "partName": "Seduta 1",
+                "fileName": "sed1.glb",
+                "note": "1"
+            },
+            {
+                "partName": "Seduta 2",
+                "fileName": "sed3.glb",
+                "note": "2"
+            },
+            {
+                "partName": "Seduta 3",
+                "fileName": "sed4.glb",
+                "note": "3"
+            }
+        ]
+    },
+    {
+        "categoryName": "Extra",
+        "parts": [
+            {
+                "partName": "Fuel Ext",
+                "fileName": "extra1.glb",
+                "note": "External Tank"
+            }
+        ]
+    }
+]

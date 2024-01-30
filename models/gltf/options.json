@@ -1,0 +1,99 @@
+[
+    {
+        "materialName":"WhiteGlossy",
+        "searchMesh" : false,
+        "meshName": "",
+        "displayName" : "Laminate Color",
+        "materials": [
+            {
+                "name": "White",
+                "color": "#f8f8f8"
+            },
+            {
+                "name": "Grey",
+                "color": "#454442"
+            },
+            {
+                "name": "Red",
+                "color": "#931508"
+            }
+        ]
+    },
+    {
+        "materialName":"AccentRubber",
+        "searchMesh" : false,
+        "meshName": "",
+        "displayName" : "Accent Color",
+        "materials": [
+            {
+                "name": "Blue",
+                "color": "#00AEBB"
+            },
+            {
+                "name": "White",
+                "color": "#f8f8f8"
+            },
+            {
+                "name": "Grey",
+                "color": "#abacb1"
+            },
+            {
+                "name": "Red",
+                "color": "#931508"
+            }
+        ]
+    },
+    {
+        "materialName":"WhiteRubber",
+        "searchMesh" : false,
+        "meshName": "",
+        "displayName" : "Base Hypalon Color",
+        "materials": [
+            {
+                "name": "White",
+                "color": "#f8f8f8"
+            },
+            {
+                "name": "Grey",
+                "color": "#abacb1"
+            },
+            {
+                "name": "Blue",
+                "color": "#00AEBB"
+            },
+            {
+                "name": "Red",
+                "color": "#931508"
+            }
+        ]
+    },
+    {
+        "materialName":"Wood",
+        "searchMesh" : false,
+        "meshName": "",
+        "displayName" : "Flooring",
+        "materials": [
+            
+            {
+                "name": "Wood",
+                "color": "#886e41"
+            },
+            {
+                "name": "White",
+                "color": "#f8f8f8"
+            },
+            {
+                "name": "Grey",
+                "color": "#abacb1"
+            },
+            {
+                "name": "Blue",
+                "color": "#00AEBB"
+            },
+            {
+                "name": "Red",
+                "color": "#931508"
+            }
+        ]
+    }
+]
